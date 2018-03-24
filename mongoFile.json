@@ -1,0 +1,114 @@
+db.Projects.insert(
+    {
+        id: 1,
+        name: "Project 1",
+        start_date: ISODate("2016-01-04"),
+        end_date:ISODate("2017-01-04"),
+        budget:100,
+        documents: [
+            {documentId: 1,
+            documentName: "Document 1"},
+            {documentId: 2,
+            documentName: "Document 2"}
+            ]
+    });
+    db.Projects.insert(
+    {
+        id: 2,
+        name: "Project 2",
+        start_date: ISODate("2016-01-07"),
+        end_date:ISODate("2018-01-05"),
+        budget:1008,
+        documents: [
+            {documentId: 3,
+            documentName: "Document 3"}
+            ]
+    });
+    db.Projects.insert(
+    {
+        id: 3,
+        name: "Project 3",
+        start_date: ISODate("2016-01-04"),
+        end_date:ISODate("2018-01-04"),
+        budget:160,
+        documents: [
+            {documentId: 2,
+            documentName: "Document 2"},
+            {documentId: 3,
+            documentName: "Document 3"}
+            ]
+    });
+    db.Projects.insert(
+    {
+        id: 4,
+        name: "Project 4",
+        start_date: ISODate("2013-01-04"),
+        end_date:ISODate("2018-01-04"),
+        budget:180,
+        documents: [
+            {documentId: 2,
+            documentName: "Document 2"},
+            {documentId: 3,
+            documentName: "Document 3"},
+            {documentId: 4,
+            documentName: "Document 4"},
+            {documentId: 5,
+            documentName: "Document 5"}
+            ]
+    });
+    db.Projects.insert(
+    {
+        id: 5,
+        name: "Project 4",
+        start_date: ISODate("2014-01-04"),
+        end_date:ISODate("2018-01-04"),
+        budget:100,
+        documents: [
+            {documentId: 1,
+            documentName: "Document 1"},
+            {documentId: 5,
+            documentName: "Document 5"}
+            ]
+    });
+    db.Projects.insert(
+    {
+        id: 6,
+        name: "Project 6",
+        start_date: ISODate("2013-01-04"),
+        end_date:ISODate("2018-01-04"),
+        budget:160,
+        documents: [
+            {documentId: 2,
+            documentName: "Document 2"},
+            {documentId: 5,
+            documentName: "Document 5"}
+            ]
+    });
+    db.Projects.insert(
+    {
+        id: 7,
+        name: "Project 7",
+        start_date: ISODate("2013-01-04"),
+        end_date:ISODate("2018-01-04"),
+        budget:1607,
+        documents: [
+            {documentId: 1,
+            documentName: "Document 1"},
+            {documentId: 3,
+            documentName: "Document 3"}
+            ]
+    });
+    db.Projects.insert(
+    {
+        id: 8,
+        name: "Project 8",
+        start_date: ISODate("2013-01-04"),
+        end_date:ISODate("2018-01-04"),
+        budget:160,
+        documents: [
+            {documentId: 1,
+            documentName: "Document 1"},
+            {documentId: 7,
+            documentName: "Document 7"}
+            ]
+    });
