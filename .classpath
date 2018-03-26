@@ -3,5 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Camelia/Desktop/mongodb-driver-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Camelia/Desktop/bson-3.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Camelia/Desktop/mongodb-driver-core-3.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

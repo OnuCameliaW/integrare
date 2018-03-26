@@ -5,10 +5,15 @@ public class Document {
 	private String documentName;
 	
 	public Document(Integer documentId, String documentName){
-
 	super();
 	this.documentId = documentId;
 	this.documentName = documentName;
+	}
+	
+	public Document() {
+		super();
+		this.documentId = 0;
+		this.documentName = null;
 	}
 
 	public Integer getDocumentId() {

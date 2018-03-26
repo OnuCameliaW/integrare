@@ -10,7 +10,7 @@ import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
 
 public class ProjectViewBuilder {
-	private static final String NAME = "projects";
+	private static final String NAME = "Projects";
 	private List<Project> projectList;
 	private List<Map<String, Object>> projectRawList;
 
@@ -43,7 +43,7 @@ public class ProjectViewBuilder {
 class ProjectViewListAdapter {
 	
 	public List<Project> map(List<Map<String, Object>> sourceDataList){
-		List<Project> viewList = new ArrayList<>();
+		List<Project> viewList = new ArrayList<Project>();
 		ProjectViewAdapter adapter = new ProjectViewAdapter();
 		for(Map<String, Object> sourceData: sourceDataList){
 			viewList.add(adapter.map(sourceData));
@@ -56,19 +56,19 @@ class ProjectViewAdapter {
 	public Project map(Map<String, Object> rawData) {
 		Integer id = ((Double) rawData.get("id")).intValue();
 		String name = (String) rawData.get("name");
-		String start_date = (String) rawData.get("start_date");
-		String end_date = (String) rawData.get("end_date");
-		Integer budget = (Double) rawData.get("budget");
+		Date start_date = (Date) rawData.get("start_date");
+		Date end_date = (Date) rawData.get("end_date");
+		Integer budget = ((Double) rawData.get("budget")).intValue();
 		
 		BasicDBList documents = (BasicDBList) rawData.get("documents");
-		ArrayList<Document> documents = new DocumentAdapter().build(documents);
+		ArrayList<Document> documentsList = new DocumentAdapter().build(documents);
 		
-		return new Project(id, name, start_date, end_date, budget, documents);				
+		return new Project(id, name, start_date, end_date, budget, documentsList);				
 	}
 
 	class DocumentAdapter {
 		public ArrayList<Document> build(BasicDBList documents){
-			ArrayList<Document> lendingLinesList = new ArrayList<Document>();
+			ArrayList<Document> documentsList = new ArrayList<Document>();
 			Integer size = documents.size();
 			
 			for(int i=0; i<size; i++){
@@ -78,13 +78,13 @@ class ProjectViewAdapter {
 				String documentName = (String) documentMap.get("documentName");
 				
 				Document document = new Document();
-				document.setId(id);
-				document.setDocumentId(isbn);
+				document.setDocumentId(documentId);
+				document.setDocumentName(documentName);
 				
-				documents.add(document);
+				documentsList.add(document);
 			}
 			
-			return documents;
+			return documentsList;
 		}
 	}
 }
